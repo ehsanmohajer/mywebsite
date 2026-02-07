@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects | Sani AI Studio</title>
+    <meta name="description" content="Projects and case studies by Sani AI Studio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="brand-text">Sani AI Studio</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="consulting.html">Consulting</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="ideas.html">Ideas</a>
+          <a href="hackathons.html">Hackathons</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-switch" aria-label="Language">
+            <button type="button" class="lang-pill" aria-label="English">EN</button>
+            <button type="button" class="lang-pill" aria-label="Finnish">FI</button>
+          </div>
+          <button class="theme-toggle" type="button" data-theme-toggle>Toggle theme</button>
+          <a class="cta" href="consulting.html">Book a session</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container" data-reveal>
+          <p class="eyebrow">Case studies</p>
+          <h1>Projects that turn ideas into working products.</h1>
+          <p class="lead">
+            Each project focuses on practical delivery, measurable impact, and
+            a user experience people actually enjoy.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects-detail">
+        <div class="container" data-reveal>
+          <article class="detail-card">
+            <div class="detail-header">
+              <h2>Saaren Pizza & Kebab</h2>
+              <span class="status">Live product</span>
+            </div>
+            <p>
+              A modern restaurant website & ordering system for Saaren Pizza &
+              Kebab in Viitasaari, Finland. Built with React 19, TypeScript, and
+              Tailwind CSS, it provides a seamless online ordering experience
+              with real‑time tracking, reservations, and a bilingual interface.
+            </p>
+            <div class="detail-grid">
+              <div>
+                <h3>Highlights</h3>
+                <ul>
+                  <li>Real‑time order tracking and staff dashboards</li>
+                  <li>Reservation flow with email verification</li>
+                  <li>Finnish + English user experience</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Tech Stack</h3>
+                <ul>
+                  <li>React 19 · TypeScript · Tailwind CSS</li>
+                  <li>Node services + email verification</li>
+                  <li>Responsive UX design system</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="detail-card">
+            <div class="detail-header">
+              <h2>Tourism Platform (Ongoing)</h2>
+              <span class="status">In progress</span>
+            </div>
+            <p>
+              A digital tourism experience for Central Finland — connecting
+              local businesses, stories, and travelers with AI‑assisted
+              discovery and smart itinerary planning.
+            </p>
+            <div class="detail-grid">
+              <div>
+                <h3>Focus</h3>
+                <ul>
+                  <li>Experience design + content strategy</li>
+                  <li>Smart itinerary planning</li>
+                  <li>Community‑driven updates</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Current Work</h3>
+                <ul>
+                  <li>Researching regional tourism needs</li>
+                  <li>Prototype for AI‑guided exploration</li>
+                  <li>Stakeholder interviews</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="chat-widget" data-chat>
+        <div class="chat-widget-header">
+          Resume Agent
+          <button type="button" class="chat-close" data-chat-toggle aria-label="Close chat">×</button>
+        </div>
+        <div class="chat-log" data-chat-log></div>
+        <form class="chat-form" data-chat-form>
+          <input type="text" data-chat-input placeholder="Ask me about AI, projects..." required />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <button class="chat-fab" type="button" data-chat-toggle>Chat</button>
+      <button class="back-to-top" type="button" data-back-to-top>Top</button>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Sani AI Studio. Built with clarity and momentum.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

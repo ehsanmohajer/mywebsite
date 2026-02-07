@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hackathons | Sani AI Studio</title>
+    <meta name="description" content="Hackathon experience and impact." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="brand-text">Sani AI Studio</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="consulting.html">Consulting</a>
+          <a href="projects.html">Projects</a>
+          <a href="ideas.html">Ideas</a>
+          <a href="hackathons.html" class="active">Hackathons</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-switch" aria-label="Language">
+            <button type="button" class="lang-pill" aria-label="English">EN</button>
+            <button type="button" class="lang-pill" aria-label="Finnish">FI</button>
+          </div>
+          <button class="theme-toggle" type="button" data-theme-toggle>Toggle theme</button>
+          <a class="cta" href="consulting.html">Book a session</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container" data-reveal>
+          <p class="eyebrow">Hackathons</p>
+          <h1>Connecting talent, companies, and practical innovation.</h1>
+          <p class="lead">
+            I’ve hosted 3 hackathons and 2 AI hackathons in Central Finland,
+            creating spaces where students and companies co‑create solutions.
+          </p>
+        </div>
+      </section>
+
+      <section class="hackathon-details">
+        <div class="container" data-reveal>
+          <div class="detail-grid">
+            <div>
+              <h2>What I deliver</h2>
+              <ul>
+                <li>End‑to‑end event design and program structure</li>
+                <li>Challenge definition with local companies</li>
+                <li>Mentoring, judging criteria, and team support</li>
+                <li>Workshops on AI and prototyping</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Impact highlights</h2>
+              <ul>
+                <li>5 hackathons hosted in Central Finland</li>
+                <li>Dozens of students connected to local employers</li>
+                <li>AI workshops that turned ideas into demos</li>
+              </ul>
+            </div>
+          </div>
+
+          <article class="detail-card">
+            <div class="detail-header">
+              <h3>AI Hackathon (Viitasaari)</h3>
+              <span class="status">Organizer</span>
+            </div>
+            <p>
+              Focused on real challenges from local businesses, with AI
+              workshops, mentoring, and project delivery within 48 hours.
+            </p>
+          </article>
+
+          <article class="detail-card">
+            <div class="detail-header">
+              <h3>Regional Innovation Hackathon</h3>
+              <span class="status">Organizer</span>
+            </div>
+            <p>
+              Students, startups, and companies collaborating to build practical
+              prototypes for the Central Finland region.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <div class="chat-widget" data-chat>
+        <div class="chat-widget-header">
+          Resume Agent
+          <button type="button" class="chat-close" data-chat-toggle aria-label="Close chat">×</button>
+        </div>
+        <div class="chat-log" data-chat-log></div>
+        <form class="chat-form" data-chat-form>
+          <input type="text" data-chat-input placeholder="Ask me about AI, projects..." required />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <button class="chat-fab" type="button" data-chat-toggle>Chat</button>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Sani AI Studio. Built with clarity and momentum.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
