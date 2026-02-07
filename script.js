@@ -167,3 +167,23 @@ window.addEventListener("load", () => {
     );
   });
 });
+
+const backToTopButtons = document.querySelectorAll("[data-back-to-top]");
+const toggleBackToTop = () => {
+  backToTopButtons.forEach((btn) => {
+    if (window.scrollY > 400) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", toggleBackToTop);
+window.addEventListener("load", toggleBackToTop);
+
+backToTopButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});

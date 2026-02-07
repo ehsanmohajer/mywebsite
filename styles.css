@@ -258,6 +258,12 @@ body.theme-dark .theme-toggle {
   gap: 6px;
 }
 
+@media (max-width: 640px) {
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.28em;
@@ -853,6 +859,11 @@ body.theme-dark .back-to-top {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.back-to-top::before {
+  content: "↑";
+  font-size: 1rem;
 }
 
 .embed-note {
