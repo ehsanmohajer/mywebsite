@@ -160,6 +160,13 @@ body.theme-dark .nav-links {
   font-weight: 600;
   font-size: 0.75rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-pill.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
 
 body.theme-dark .lang-pill {
@@ -689,7 +696,16 @@ input {
   font-family: inherit;
 }
 
-body.theme-dark input {
+textarea {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(18, 16, 15, 0.2);
+  font-family: inherit;
+  resize: vertical;
+}
+
+body.theme-dark input,
+body.theme-dark textarea {
   background: var(--paper);
   color: var(--ink);
   border-color: rgba(255, 255, 255, 0.12);
@@ -709,6 +725,38 @@ body.theme-dark input {
 
 body.theme-dark .note-box {
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+.cv-review {
+  padding: 80px 0;
+  background: var(--sand);
+}
+
+.cv-form {
+  display: grid;
+  gap: 14px;
+}
+
+.cv-form input,
+.cv-form textarea {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(18, 16, 15, 0.2);
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--card);
+}
+
+body.theme-dark .cv-form input,
+body.theme-dark .cv-form textarea {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.cv-form textarea {
+  resize: vertical;
+  min-height: 80px;
 }
 
 .assistant-panel {

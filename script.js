@@ -3,6 +3,40 @@ const chatForm = document.getElementById("chat-form");
 const chatInput = document.getElementById("chat-input");
 const chatLog = document.getElementById("chat-log");
 const themeToggle = document.querySelector("[data-theme-toggle]");
+const cvUploadForm = document.getElementById("cv-upload-form");
+
+// Language switching
+let currentLang = localStorage.getItem("lang") || "en";
+
+const applyLanguage = (lang) => {
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
+  
+  // Update all elements with language attributes
+  document.querySelectorAll("[data-lang-en]").forEach(el => {
+    if (lang === "en") {
+      el.textContent = el.getAttribute("data-lang-en");
+    } else if (lang === "fi" && el.hasAttribute("data-lang-fi")) {
+      el.textContent = el.getAttribute("data-lang-fi");
+    }
+  });
+  
+  // Update language pills
+  document.querySelectorAll(".lang-pill").forEach(pill => {
+    pill.classList.toggle("active", pill.textContent.toLowerCase() === lang);
+  });
+};
+
+// Initialize language
+applyLanguage(currentLang);
+
+// Language switch buttons
+document.querySelectorAll(".lang-pill").forEach(pill => {
+  pill.addEventListener("click", () => {
+    const lang = pill.textContent.toLowerCase();
+    applyLanguage(lang);
+  });
+});
 
 const applyTheme = (mode) => {
   document.body.classList.toggle("theme-dark", mode === "dark");
@@ -92,6 +126,22 @@ if (bookingForm) {
     const subject = encodeURIComponent("Consulting session request");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nTopic: ${topic}\nPreferred time: ${time}`
+    );
+    window.location.href = `mailto:ehsanmohajer.fi@gmail.com?subject=${subject}&body=${body}`;
+  });
+}
+
+if (cvUploadForm) {
+  cvUploadForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(cvUploadForm);
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+
+    const subject = encodeURIComponent("CV Review Request");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nAdditional notes:\n${message || "None"}\n\nPlease attach your CV to this email.`
     );
     window.location.href = `mailto:ehsanmohajer.fi@gmail.com?subject=${subject}&body=${body}`;
   });
